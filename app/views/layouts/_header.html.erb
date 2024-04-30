@@ -7,9 +7,6 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <% if user_signed_in? %>
-            <span class="navbar-text text-light">
-                Welcome, <%= current_user.username %>
-            </span>
             <%= link_to 'Sign out', destroy_user_session_path, class: "btn btn-primary btn-right", data: { turbo_method: :delete } %>
         <% else %>
             <h1>Home</h1>

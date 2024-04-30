@@ -1,3 +1,4 @@
 <% if user_signed_in? %>
   Welcome, <%= current_user.email %>
+  <%= link_to "Let's start Chatting", rooms_path %>
 <%end%>
