@@ -30,8 +30,9 @@ gem 'jbuilder'
 gem 'devise'
 
 gem 'bootstrap'
+gem 'pry'
 gem 'sassc-rails'
-gem "pry"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -72,7 +73,12 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
-  gem 'selenium-webdriver'
+  gem 'database_cleaner'
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'rails-controller-testing'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
 end
 
-gem "stimulus_reflex", "= 3.5.0.pre8"
+gem 'stimulus_reflex', '= 3.5.0.pre8'

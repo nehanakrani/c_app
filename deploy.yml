@@ -1,0 +1,17 @@
+service: chat_app
+image: 37s/chat_app
+servers:
+  - 192.168.0.1
+  - 192.168.0.2
+registry:
+  username: registry-user-name
+  password:
+    secure: KAMAL_REGISTRY_PASSWORD
+env:
+  secret:
+    secure: RAILS_MASTER_KEY
+healthcheck:
+  path: /healthz
+  port: 4000
+  max_attempts: 7
+  interval: 20s
