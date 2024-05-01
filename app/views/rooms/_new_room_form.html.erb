@@ -1,4 +1,6 @@
 <%= form_with(model: @room, remote: true, class: "d-flex mb-3" ) do |f| %>
   <%= f.text_field :name, class: "form-control me-2", autocomplete: 'off' %>
-  <%= f.submit data: { disable_with: false }, class: 'btn btn-warning'%>
+  <div class="field form-group">
+    <%= f.submit data: { disable_with: false }, class: 'btn btn-warning'%>
+  </div>
 <% end %>

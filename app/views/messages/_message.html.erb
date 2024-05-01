@@ -1,8 +1,14 @@
-<div class="cont-<%=message.user.id%>">
-  <div class="message_box msg-<%= message.user.id %>">
-    <% unless message.room.is_private %>
-      <h6 class="name"> <%= message.user.email %> </h6>
-    <% end %>
-    <%= message.body %>
+<div class="card-body position-relative msg_card_body">
+  <div class="position-relative d-flex justify-content-start flex-row mb-4 msg-<%= message.user.id %>">
+    <div class="msg_container bg-secondary bg-light bg-gradient min-w-50 border">
+      <%= message.body %>
+      <span class="msg_time text-muted"><%= l(message.created_at, format: :short) %></span>
+      <% unless message.room.is_private %>
+        <span class="msg_author text-muted"><%= message.user.email %></span>
+      <% end %>
+    </div>
+    <div class="img_cont_msg">
+      <img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" class="rounded-circle user_img_msg">
+    </div>
   </div>
 </div>
